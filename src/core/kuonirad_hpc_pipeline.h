@@ -34,13 +34,13 @@ public:
 
 private:
     struct PinnedTextureBuffer {
-        std::unique_ptr<float4[]> data;
+        std::unique_ptr<Float4[]> data;
         int width;
         int height;
     };
 
     static PinnedTextureBuffer createPinnedBuffer(const TextureData& input);
-    static void waveletDecompose(const float4* inputData, int width, int height,
+    static void waveletDecompose(const Float4* inputData, int width, int height,
                                TextureData& lowFreq, TextureData& highFreq);
     static TextureData waveletRecompose(const TextureData& base, 
                                       const TextureData& detail);

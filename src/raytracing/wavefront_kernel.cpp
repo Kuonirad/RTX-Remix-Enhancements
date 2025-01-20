@@ -12,16 +12,16 @@ void ConcurrentWavefrontKernel::generateRays(std::vector<Ray>& rays) {
     std::for_each(std::execution::par_unseq, rays.begin(), rays.end(),
         [](Ray& ray) {
             // Initialize ray parameters (simplified)
-            ray.origin[0] = 0.0f;
-            ray.origin[1] = 0.0f;
-            ray.origin[2] = 0.0f;
+            ray.origin[0] = 0.0F;
+            ray.origin[1] = 0.0F;
+            ray.origin[2] = 0.0F;
             
-            ray.direction[0] = 0.0f;
-            ray.direction[1] = 0.0f;
-            ray.direction[2] = 1.0f;
+            ray.direction[0] = 0.0F;
+            ray.direction[1] = 0.0F;
+            ray.direction[2] = 1.0F;
             
-            ray.tMin = 0.001f;
-            ray.tMax = 1000.0f;
+            ray.tMin = 0.001F;
+            ray.tMax = 1000.0F;
         });
 }
 

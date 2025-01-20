@@ -1,28 +1,28 @@
 #include "pde_solver.h"
-#include <cmath>
+#include <cmath>   // for std::exp, std::abs
 
 namespace rtx {
 
 void AnisotropicDiffusion::solve(TextureData& tex, int yStart, int yEnd, float dt) {
-    const float k = 0.1f; // conductance parameter
+    static constexpr float CONDUCTANCE_PARAM = 0.1F; // conductance parameter
     const int width = tex.width;
     
     for (int y = yStart; y < yEnd; y++) {
         for (int x = 0; x < width; x++) {
             const int idx = y * width + x;
-            float4& pixel = tex.pixels[idx];
+            Float4& pixel = tex.pixels[idx];
             
             // Compute gradients in 4 directions
-            float4 north = (y > 0) ? tex.pixels[idx - width] : pixel;
-            float4 south = (y < tex.height-1) ? tex.pixels[idx + width] : pixel;
-            float4 east = (x < width-1) ? tex.pixels[idx + 1] : pixel;
-            float4 west = (x > 0) ? tex.pixels[idx - 1] : pixel;
+            Float4 north = (y > 0) ? tex.pixels[idx - width] : pixel;
+            Float4 south = (y < tex.height-1) ? tex.pixels[idx + width] : pixel;
+            Float4 east = (x < width-1) ? tex.pixels[idx + 1] : pixel;
+            Float4 west = (x > 0) ? tex.pixels[idx - 1] : pixel;
             
             // Compute diffusion coefficients
-            float cn = computeConductionCoeff(std::abs(north.x - pixel.x));
-            float cs = computeConductionCoeff(std::abs(south.x - pixel.x));
-            float ce = computeConductionCoeff(std::abs(east.x - pixel.x));
-            float cw = computeConductionCoeff(std::abs(west.x - pixel.x));
+            float cn = computeConductionCoeff(std::abs(north.x - pixel.x), CONDUCTANCE_PARAM);
+            float cs = computeConductionCoeff(std::abs(south.x - pixel.x), CONDUCTANCE_PARAM);
+            float ce = computeConductionCoeff(std::abs(east.x - pixel.x), CONDUCTANCE_PARAM);
+            float cw = computeConductionCoeff(std::abs(west.x - pixel.x), CONDUCTANCE_PARAM);
             
             // Update pixel values
             pixel.x += dt * (cn*(north.x - pixel.x) + cs*(south.x - pixel.x) +
@@ -32,9 +32,10 @@ void AnisotropicDiffusion::solve(TextureData& tex, int yStart, int yEnd, float d
     }
 }
 
-float AnisotropicDiffusion::computeConductionCoeff(float gradient) {
-    const float k = 0.1f;
-    return std::exp(-(gradient*gradient)/(k*k));
+float AnisotropicDiffusion::computeConductionCoeff(float gradient, float k) {
+    const float squared_gradient = gradient * gradient;
+    const float squared_k = k * k;
+    return std::exp(-squared_gradient / squared_k);
 }
 
 void PoissonBlending::solve(TextureData& tex, int yStart, int yEnd, float dt) {

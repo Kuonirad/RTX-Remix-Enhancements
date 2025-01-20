@@ -1,0 +1,32 @@
+---
+Checks: '
+  *,
+  -fuchsia-*,
+  -google-*,
+  -zircon-*,
+  -abseil-*,
+  -modernize-use-trailing-return-type,
+  -llvm-*,
+  -llvmlibc-*
+  '
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+AnalyzeTemporaryDtors: false
+FormatStyle: none
+CheckOptions:
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: UPPER_CASE
+  - key: modernize-use-nullptr.NullMacros
+    value: 'NULL'
+  - key: performance-move-const-arg.CheckTriviallyCopyableMove
+    value: 'true'
+  - key: readability-function-cognitive-complexity.Threshold
+    value: '25'
+  - key: readability-magic-numbers.IgnoredIntegerValues
+    value: '1;2;3;4;8;16;32;64;128;256;512;1024'
+  - key: cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+    value: 'true'

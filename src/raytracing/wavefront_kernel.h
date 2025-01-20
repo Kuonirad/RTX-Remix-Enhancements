@@ -10,17 +10,17 @@ struct Ray {
     float direction[3];
     float tMin;
     float tMax;
-};
+} __attribute__((aligned(32)));
 
 class ConcurrentWavefrontKernel {
 public:
-    void generateRays(std::vector<Ray>& rays);
+    static void generateRays(std::vector<Ray>& rays);
     void traceRays(const std::vector<Ray>& rays);
-    void shade(const std::vector<Ray>& rays);
+    static void shade(const std::vector<Ray>& rays);
 
 private:
     void scheduleKernels();
-    void optimizeRayBatches(std::vector<Ray>& rays);
+    static void optimizeRayBatches(std::vector<Ray>& rays);
 };
 
 } // namespace rtx

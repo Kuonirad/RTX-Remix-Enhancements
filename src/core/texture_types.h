@@ -12,11 +12,11 @@ namespace rtx {
  * Components are accessible as x, y, z, w and support basic arithmetic operations
  * for efficient texture manipulation.
  */
-struct float4 {
+struct Float4 {
     float x, y, z, w;
     
-    float4() : x(0), y(0), z(0), w(0) {}
-    float4(float v) : x(v), y(v), z(v), w(v) {}
+    Float4() : x(0), y(0), z(0), w(0) {}
+    explicit Float4(float v) : x(v), y(v), z(v), w(v) {}
     
     /**
      * @brief Multiplies all components by a scalar value.
@@ -24,8 +24,8 @@ struct float4 {
      * @param scalar The value to multiply each component by
      * @return float4 A new vector with all components multiplied by scalar
      */
-    float4 operator*(float scalar) const {
-        float4 result;
+    Float4 operator*(float scalar) const {
+        Float4 result;
         result.x = x * scalar;
         result.y = y * scalar;
         result.z = z * scalar;
@@ -33,14 +33,14 @@ struct float4 {
         return result;
     }
     
-    float4& operator+=(const float4& other) {
+    Float4& operator+=(const Float4& other) {
         x += other.x;
         y += other.y;
         z += other.z;
         w += other.w;
         return *this;
     }
-};
+} __attribute__((aligned(16)));
 
 /**
  * @brief Container class for 2D texture data with RGBA color components.
@@ -53,7 +53,7 @@ class TextureData {
 public:
     int width = 0;
     int height = 0;
-    std::vector<float4> pixels;
+    std::vector<Float4> pixels;
     
     /**
      * @brief Resizes the texture to the specified dimensions.
