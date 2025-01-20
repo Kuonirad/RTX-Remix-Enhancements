@@ -5,6 +5,13 @@
 
 namespace rtx {
 
+/**
+ * @brief A 4-component floating point vector used for color and texture data.
+ * 
+ * Represents RGBA color values or other 4D vector quantities in texture processing.
+ * Components are accessible as x, y, z, w and support basic arithmetic operations
+ * for efficient texture manipulation.
+ */
 struct float4 {
     float x, y, z, w;
     
@@ -29,12 +36,28 @@ struct float4 {
     }
 };
 
+/**
+ * @brief Container class for 2D texture data with RGBA color components.
+ * 
+ * Stores texture data as a contiguous array of float4 values, representing
+ * RGBA pixels. Provides basic operations for texture manipulation including
+ * resizing. The pixel data is stored in row-major order.
+ */
 class TextureData {
 public:
     int width = 0;
     int height = 0;
     std::vector<float4> pixels;
     
+    /**
+     * @brief Resizes the texture to the specified dimensions.
+     * 
+     * @param w New width of the texture in pixels
+     * @param h New height of the texture in pixels
+     * 
+     * Reallocates the pixel buffer to accommodate the new dimensions.
+     * Existing pixel data may be lost during resizing.
+     */
     void resize(int w, int h) {
         width = w;
         height = h;
