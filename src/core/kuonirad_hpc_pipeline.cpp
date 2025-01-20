@@ -13,7 +13,7 @@ KuoniradHpcPipeline::PinnedTextureBuffer KuoniradHpcPipeline::createPinnedBuffer
     PinnedTextureBuffer buf;
     buf.width = input.width;
     buf.height = input.height;
-    buf.data = std::make_unique<float4[]>(buf.width * buf.height);
+    buf.data = std::make_unique<Float4[]>(buf.width * buf.height);
     
     for (int i = 0; i < buf.width * buf.height; i++) {
         buf.data[i] = input.pixels[i];
@@ -84,15 +84,16 @@ TextureData KuoniradHpcPipeline::runPipeline(const TextureData& input) {
     return finalOutput;
 }
 
-void KuoniradHpcPipeline::waveletDecompose(const float4* inputData, int width, int height,
+void KuoniradHpcPipeline::waveletDecompose(const Float4* inputData, int width, int height,
                                      TextureData& lowFreq, TextureData& highFreq) {
     lowFreq.resize(width, height);
     highFreq.resize(width, height);
 
     for (int i = 0; i < width * height; i++) {
-        float4 c = inputData[i];
-        lowFreq.pixels[i] = c * 0.5f;
-        highFreq.pixels[i] = c * 0.5f;
+        Float4 c = inputData[i];
+        static constexpr float DECOMPOSE_FACTOR = 0.5F;
+        lowFreq.pixels[i] = c * DECOMPOSE_FACTOR;
+        highFreq.pixels[i] = c * DECOMPOSE_FACTOR;
     }
 }
 

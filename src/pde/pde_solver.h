@@ -9,7 +9,7 @@ public:
     static void solve(TextureData& tex, int yStart, int yEnd, float dt);
 
 private:
-    static float computeConductionCoeff(float gradient);
+    static float computeConductionCoeff(float gradient, float k);
 };
 
 class PoissonBlending {
