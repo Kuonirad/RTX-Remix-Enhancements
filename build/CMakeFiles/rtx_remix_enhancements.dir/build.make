@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/RTX-Remix-Enhancements
+CMAKE_SOURCE_DIR = /home/ubuntu/repos/RTX-Remix-Enhancements
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/RTX-Remix-Enhancements/build
+CMAKE_BINARY_DIR = /home/ubuntu/repos/RTX-Remix-Enhancements/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rtx_remix_enhancements.dir/depend.make
@@ -72,86 +72,86 @@ include CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o: ../src/core/kuonirad_hpc_pipeline.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline.cpp.s
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o: ../src/core/kuonirad_hpc_pipeline_options.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/kuonirad_hpc_pipeline_options.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/kuonirad_hpc_pipeline_options.cpp.s
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o: ../src/core/ai_inference.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/core/ai_inference.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/ai_inference.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/core/ai_inference.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/ai_inference.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/core/ai_inference.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/ai_inference.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.s
 
 CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o: ../src/pde/pde_solver.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/pde/pde_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/pde/pde_solver.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/pde/pde_solver.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/pde/pde_solver.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/pde/pde_solver.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/pde/pde_solver.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/pde/pde_solver.cpp.s
 
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o: ../src/raytracing/wavefront_kernel.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.s
 
 CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/flags.make
 CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o: ../src/omniverse/usd_integration.cpp
 CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o: CMakeFiles/rtx_remix_enhancements.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o -c /home/ubuntu/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o -MF CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o.d -o CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o -c /home/ubuntu/repos/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp
 
 CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/repos/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp > CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.i
 
 CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/repos/RTX-Remix-Enhancements/src/omniverse/usd_integration.cpp -o CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.s
 
 # Object files for target rtx_remix_enhancements
 rtx_remix_enhancements_OBJECTS = \
@@ -173,7 +173,7 @@ librtx_remix_enhancements.a: CMakeFiles/rtx_remix_enhancements.dir/src/raytracin
 librtx_remix_enhancements.a: CMakeFiles/rtx_remix_enhancements.dir/src/omniverse/usd_integration.cpp.o
 librtx_remix_enhancements.a: CMakeFiles/rtx_remix_enhancements.dir/build.make
 librtx_remix_enhancements.a: CMakeFiles/rtx_remix_enhancements.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library librtx_remix_enhancements.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library librtx_remix_enhancements.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/rtx_remix_enhancements.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rtx_remix_enhancements.dir/link.txt --verbose=$(VERBOSE)
 
@@ -186,6 +186,6 @@ CMakeFiles/rtx_remix_enhancements.dir/clean:
 .PHONY : CMakeFiles/rtx_remix_enhancements.dir/clean
 
 CMakeFiles/rtx_remix_enhancements.dir/depend:
-	cd /home/ubuntu/RTX-Remix-Enhancements/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/RTX-Remix-Enhancements /home/ubuntu/RTX-Remix-Enhancements /home/ubuntu/RTX-Remix-Enhancements/build /home/ubuntu/RTX-Remix-Enhancements/build /home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles/rtx_remix_enhancements.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/repos/RTX-Remix-Enhancements/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/repos/RTX-Remix-Enhancements /home/ubuntu/repos/RTX-Remix-Enhancements /home/ubuntu/repos/RTX-Remix-Enhancements/build /home/ubuntu/repos/RTX-Remix-Enhancements/build /home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles/rtx_remix_enhancements.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rtx_remix_enhancements.dir/depend
 

@@ -3,7 +3,11 @@
 
 namespace rtx {
 
-void AnisotropicDiffusion::solve(TextureData& texture, int startRowIndex, int endRowIndex, float deltaTime) {
+void AnisotropicDiffusion::solve(
+    TextureData& texture,
+    const int startRowIndex,
+    const int endRowIndex,
+    const float deltaTime) {
     // Perona-Malik diffusion parameters
     static constexpr float DEFAULT_CONDUCTANCE = 0.1F;     // Default conductance (k) for edge-preserving diffusion
     static constexpr int VON_NEUMANN_SIZE = 4;            // 4-directional von Neumann neighborhood
@@ -59,7 +63,11 @@ float AnisotropicDiffusion::computeConductionCoeff(float gradientMagnitude, floa
     return std::exp(-squared_gradient / squared_conductance);
 }
 
-void PoissonBlending::solve(TextureData& texture, int startRowIndex, int endRowIndex, float deltaTime) {
+void PoissonBlending::solve(
+    TextureData& texture,
+    const int startRowIndex,
+    const int endRowIndex,
+    const float deltaTime) {
     // Constants for Poisson equation solver
     static constexpr float ZERO_LAPLACIAN = 0.0F;          // Initial value for Laplacian accumulator
     static constexpr float BLEND_WEIGHT = 1.0F;            // Weight for Laplacian contribution in blending

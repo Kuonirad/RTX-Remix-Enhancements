@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/RTX-Remix-Enhancements
+CMAKE_SOURCE_DIR = /home/ubuntu/repos/RTX-Remix-Enhancements
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/RTX-Remix-Enhancements/build
+CMAKE_BINARY_DIR = /home/ubuntu/repos/RTX-Remix-Enhancements/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/rtx_remix_enhancements.dir/clean
 CMakeFiles/rtx_remix_enhancements.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtx_remix_enhancements.dir/build.make CMakeFiles/rtx_remix_enhancements.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtx_remix_enhancements.dir/build.make CMakeFiles/rtx_remix_enhancements.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target rtx_remix_enhancements"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target rtx_remix_enhancements"
 .PHONY : CMakeFiles/rtx_remix_enhancements.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rtx_remix_enhancements.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rtx_remix_enhancements.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/repos/RTX-Remix-Enhancements/build/CMakeFiles 0
 .PHONY : CMakeFiles/rtx_remix_enhancements.dir/rule
 
 # Convenience name for target.

@@ -111,7 +111,6 @@ void KuoniradHpcPipeline::waveletDecompose(const std::vector<Float4>& inputData,
 
 TextureData KuoniradHpcPipeline::waveletRecompose(const TextureData& base, const TextureData& detail) {
     static constexpr float RECOMPOSE_WEIGHT = 1.0F;  // Weight for detail contribution in recomposition
-    static constexpr int MIN_INDEX = 0;              // Minimum array index
     
     TextureData output = base;
     const size_t totalPixels = static_cast<size_t>(base.width()) * static_cast<size_t>(base.height());

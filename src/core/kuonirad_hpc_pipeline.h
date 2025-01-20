@@ -13,6 +13,9 @@ enum class PdeMethod {
 };
 
 class KuoniradHpcPipeline {
+private:
+    static constexpr size_t CACHE_LINE_SIZE = 64; // Modern CPU cache line size
+
 public:
     // HPC concurrency toggles
     static const Option<bool> enablePipeline;
@@ -32,7 +35,6 @@ public:
     static void initialize();
     static TextureData runPipeline(const TextureData& input);
 
-public:
     struct PinnedTextureBuffer {
     private:
         std::vector<Float4> m_data;
@@ -49,9 +51,7 @@ public:
         void setWidth(int width) { m_width = width; }
         void setHeight(int height) { m_height = height; }
         void resize(size_t size) { m_data.resize(size); }
-    } __attribute__((aligned(32)));
-
-public:
+    } __attribute__((aligned(CACHE_LINE_SIZE)));
     static PinnedTextureBuffer createPinnedBuffer(const TextureData& input);
     static void waveletDecompose(const std::vector<Float4>& inputData, int width, int height,
                                TextureData& lowFreq, TextureData& highFreq);
