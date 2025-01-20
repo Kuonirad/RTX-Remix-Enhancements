@@ -16,9 +16,8 @@ KuoniradAiInference& KuoniradAiInference::getInstance() {
 TextureData KuoniradAiInference::enhanceTexture(const TextureData& input) {
     // Placeholder implementation
     TextureData output;
-    output.width = input.width;
-    output.height = input.height;
-    output.pixels = input.pixels;
+    output.resize(input.width(), input.height());
+    output.pixels() = input.pixels();
     return output;
 }
 
