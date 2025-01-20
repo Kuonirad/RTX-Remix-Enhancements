@@ -1,21 +1,27 @@
+<!--
+Copyright (c) 2021-2024 Kuonirad
+-->
+
 # Security Policy
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The following versions of RTX-Remix-Enhancements are currently supported with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 0.1.x   | :white_check_mark: |
+| < 0.1   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in RTX-Remix-Enhancements, please report it by:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. **Do not** create a public GitHub issue
+2. Email the details to [Contact Email TBD]
+3. Include a detailed description of the vulnerability and steps to reproduce if possible
+
+You can expect:
+- Initial response within 48 hours
+- Regular updates on the progress of addressing the vulnerability
+- Full credit in the security advisory when the issue is resolved (unless you prefer to remain anonymous)
