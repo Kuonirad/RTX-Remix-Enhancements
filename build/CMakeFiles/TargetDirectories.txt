@@ -1,0 +1,3 @@
+/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles/rtx_remix_enhancements.dir
+/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/RTX-Remix-Enhancements/build/CMakeFiles/rebuild_cache.dir
