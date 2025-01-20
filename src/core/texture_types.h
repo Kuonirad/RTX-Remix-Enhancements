@@ -18,6 +18,12 @@ struct float4 {
     float4() : x(0), y(0), z(0), w(0) {}
     float4(float v) : x(v), y(v), z(v), w(v) {}
     
+    /**
+     * @brief Multiplies all components by a scalar value.
+     * 
+     * @param scalar The value to multiply each component by
+     * @return float4 A new vector with all components multiplied by scalar
+     */
     float4 operator*(float scalar) const {
         float4 result;
         result.x = x * scalar;
