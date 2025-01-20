@@ -8,14 +8,14 @@ template<typename T>
 class Option {
 public:
     Option() = default;
-    Option(T defaultVal) : value_(defaultVal) {}
+    explicit Option(T defaultValue) : m_value(defaultValue) {}
     
-    operator T() const { return value_; }
-    T operator()() const { return value_; }
-    void set(const T& value) { value_ = value; }
+    explicit operator T() const { return m_value; }
+    T operator()() const { return m_value; }
+    void set(const T& newValue) { m_value = newValue; }
 
 private:
-    T value_{};
+    T m_value{};
 };
 
 } // namespace rtx
