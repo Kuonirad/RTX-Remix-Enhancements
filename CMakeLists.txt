@@ -31,5 +31,5 @@ target_link_libraries(rtx_remix_enhancements PUBLIC
 if(MSVC)
     target_compile_options(rtx_remix_enhancements PRIVATE /W4)
 else()
-    target_compile_options(rtx_remix_enhancements PRIVATE -Wall -Wextra)
+    target_compile_options(rtx_remix_enhancements PRIVATE -Wall -Wextra -std=c++20)
 endif()

@@ -1,6 +1,7 @@
 #include "pde_solver.h"
 #include <cmath>     // for std::exp, std::abs
 #include <algorithm> // for std::clamp
+#include <utility>   // for std::min, std::max
 
 namespace rtx {
 
