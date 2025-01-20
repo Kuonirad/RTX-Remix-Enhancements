@@ -1,0 +1,15 @@
+name: "CodeQL Config"
+
+build:
+  language: cpp
+  steps:
+    - name: Configure CMake
+      run: |
+        mkdir -p build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+
+    - name: Build Project
+      run: |
+        cd build
+        make
