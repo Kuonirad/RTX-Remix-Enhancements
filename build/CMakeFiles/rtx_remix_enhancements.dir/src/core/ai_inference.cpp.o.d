@@ -1,8 +1,8 @@
 CMakeFiles/rtx_remix_enhancements.dir/src/core/ai_inference.cpp.o: \
- /home/ubuntu/RTX-Remix-Enhancements/src/core/ai_inference.cpp \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/ai_inference.cpp \
  /usr/include/stdc-predef.h \
- /home/ubuntu/RTX-Remix-Enhancements/src/core/ai_inference.h \
- /home/ubuntu/RTX-Remix-Enhancements/src/core/texture_types.h \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/ai_inference.h \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/core/texture_types.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

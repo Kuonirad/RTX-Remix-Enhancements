@@ -11,12 +11,14 @@ namespace rtx {
 
 KuoniradHpcPipeline::PinnedTextureBuffer KuoniradHpcPipeline::createPinnedBuffer(const TextureData& input) {
     PinnedTextureBuffer buf;
-    buf.width = input.width;
-    buf.height = input.height;
-    buf.data = std::make_unique<Float4[]>(buf.width * buf.height);
+    buf.setWidth(input.width());
+    buf.setHeight(input.height());
+    buf.resize(static_cast<size_t>(buf.width()) * static_cast<size_t>(buf.height()));
     
-    for (int i = 0; i < buf.width * buf.height; i++) {
-        buf.data[i] = input.pixels[i];
+    const size_t totalPixels = static_cast<size_t>(buf.width()) * static_cast<size_t>(buf.height());
+    #pragma unroll 4
+    for (size_t pixelIndex = 0; pixelIndex < totalPixels; pixelIndex++) {
+        buf.data()[pixelIndex] = input.pixels()[pixelIndex];
     }
     return buf;
 }
@@ -34,22 +36,26 @@ TextureData KuoniradHpcPipeline::runPipeline(const TextureData& input) {
     auto pinned = createPinnedBuffer(input);
 
     // Optional wavelet decomposition
-    TextureData baseLevel, detailLevel;
+    TextureData baseLevel;
+    TextureData detailLevel;
     if (useWavelet()) {
-        waveletDecompose(pinned.data.get(), pinned.width, pinned.height, baseLevel, detailLevel);
+        waveletDecompose(pinned.data(), pinned.width(), pinned.height(), baseLevel, detailLevel);
     } else {
         baseLevel = input;
     }
 
     // Domain decomposition for PDE passes
-    int numThreads = concurrencyThreads();
-    int tileHeight = baseLevel.height / numThreads;
+    static constexpr int MIN_TILE_HEIGHT = 1;  // Minimum height of a processing tile
+    static constexpr int MIN_THREADS = 1;      // Minimum number of concurrent threads
+    
+    int numThreads = std::max(concurrencyThreads(), MIN_THREADS);
+    int tileHeight = std::max(baseLevel.height() / numThreads, MIN_TILE_HEIGHT);
     std::vector<std::future<void>> futures;
-    std::mutex tileMutex;
+    // Removed unused mutex
 
-    for (int t = 0; t < numThreads; t++) {
-        int yStart = t * tileHeight;
-        int yEnd = (t == numThreads - 1) ? baseLevel.height : (t + 1) * tileHeight;
+    for (int threadIndex = 0; threadIndex < numThreads; threadIndex++) {
+        int yStart = threadIndex * tileHeight;
+        int yEnd = (threadIndex == numThreads - 1) ? baseLevel.height() : (threadIndex + 1) * tileHeight;
 
         futures.push_back(std::async(std::launch::async, [&, yStart, yEnd]() {
             for (int iter = 0; iter < pdeIterations(); iter++) {
@@ -65,8 +71,8 @@ TextureData KuoniradHpcPipeline::runPipeline(const TextureData& input) {
         }));
     }
 
-    for (auto& f : futures) {
-        f.wait();
+    for (auto& future : futures) {
+        future.wait();
     }
 
     // Recombine if wavelet was used
@@ -84,23 +90,34 @@ TextureData KuoniradHpcPipeline::runPipeline(const TextureData& input) {
     return finalOutput;
 }
 
-void KuoniradHpcPipeline::waveletDecompose(const Float4* inputData, int width, int height,
+void KuoniradHpcPipeline::waveletDecompose(const std::vector<Float4>& inputData, int width, int height,
                                      TextureData& lowFreq, TextureData& highFreq) {
     lowFreq.resize(width, height);
     highFreq.resize(width, height);
 
-    for (int i = 0; i < width * height; i++) {
-        Float4 c = inputData[i];
-        static constexpr float DECOMPOSE_FACTOR = 0.5F;
-        lowFreq.pixels[i] = c * DECOMPOSE_FACTOR;
-        highFreq.pixels[i] = c * DECOMPOSE_FACTOR;
+    static constexpr float WAVELET_DECOMPOSE_FACTOR = 0.5F;  // Haar wavelet decomposition factor
+    static constexpr float WAVELET_NORMALIZE_FACTOR = 1.0F;   // Normalization factor for wavelet transform
+    
+    const size_t totalPixels = static_cast<size_t>(width) * static_cast<size_t>(height);
+    static constexpr float COMBINED_FACTOR = WAVELET_DECOMPOSE_FACTOR * WAVELET_NORMALIZE_FACTOR;
+    
+    #pragma unroll 4
+    for (size_t pixelIndex = 0; pixelIndex < totalPixels; pixelIndex++) {
+        const Float4& currentPixel = inputData[pixelIndex];
+        lowFreq.pixels()[pixelIndex] = currentPixel * COMBINED_FACTOR;
+        highFreq.pixels()[pixelIndex] = currentPixel * COMBINED_FACTOR;
     }
 }
 
 TextureData KuoniradHpcPipeline::waveletRecompose(const TextureData& base, const TextureData& detail) {
+    static constexpr float RECOMPOSE_WEIGHT = 1.0F;  // Weight for detail contribution in recomposition
+    
     TextureData output = base;
-    for (int i = 0; i < base.width * base.height; i++) {
-        output.pixels[i] += detail.pixels[i];
+    const size_t totalPixels = static_cast<size_t>(base.width()) * static_cast<size_t>(base.height());
+    
+    #pragma unroll 4
+    for (size_t pixelIndex = 0; pixelIndex < totalPixels; pixelIndex++) {
+        output.pixels()[pixelIndex] += detail.pixels()[pixelIndex] * RECOMPOSE_WEIGHT;
     }
     return output;
 }

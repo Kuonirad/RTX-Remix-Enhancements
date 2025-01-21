@@ -1,8 +1,8 @@
 CMakeFiles/rtx_remix_enhancements.dir/src/raytracing/wavefront_kernel.cpp.o: \
- /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.cpp \
  /usr/include/stdc-predef.h \
- /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.h \
- /home/ubuntu/RTX-Remix-Enhancements/src/raytracing/../core/texture_types.h \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/wavefront_kernel.h \
+ /home/ubuntu/repos/RTX-Remix-Enhancements/src/raytracing/../core/texture_types.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

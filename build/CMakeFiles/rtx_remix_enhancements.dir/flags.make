@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubuntu/RTX-Remix-Enhancements/src
+CXX_INCLUDES = -I/home/ubuntu/repos/RTX-Remix-Enhancements/src
 
 CXX_FLAGS = -Wall -Wextra -std=gnu++20
 
